@@ -1,6 +1,6 @@
 # Kubernetes WordPress & MySQL Multi-Container Infrastructure
 
-A production-ready, local DevOps project demonstrating how to deploy a scalable, multi-container web application architecture on Kubernetes using standard manifests. 
+A local DevOps project demonstrating how to deploy a scalable, multi-container web application architecture on Kubernetes using standard manifests. 
 
 This project provisions a classic 2-tier application infrastructure featuring a stateless WordPress frontend scaled for high availability, alongside a stateful, persistent MySQL database backend.
 
@@ -8,7 +8,7 @@ This project provisions a classic 2-tier application infrastructure featuring a 
 
 ##  Architecture Overview
 
-The infrastructure separates concerns across three core layers:
+The project consists of three layers:
 
 * **Compute Tier:** Deployments manage the desired state of the application containers. The WordPress container runs Apache/PHP, while the backend container runs the MySQL database engine.
 * **Storage Tier:** Persistent Volume Claims (PVCs) dynamically request storage from the cluster to ensure that database records and media uploads survive container restarts.
@@ -22,7 +22,7 @@ The infrastructure separates concerns across three core layers:
 my-k8s-project/
 ├── k8s/
 │   ├── base/
-│   │   └── secret.yaml       # Encrypted database credentials & root passwords
+│   │   └── secret.yaml       # database credentials & root passwords
 │   ├── mysql/
 │   │   └── mysql.yaml        # Headless Service, PVC, & MySQL Deployment
 │   └── wordpress/
